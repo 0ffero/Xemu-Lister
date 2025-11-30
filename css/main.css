@@ -1,0 +1,235 @@
+body {
+    background-color: #222222;
+    color: white;
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    overflow-x: hidden;
+    overflow-y: scroll; /* added to stop the dom reposition when scrollbar disappears */
+}
+
+a {
+    color: rgba(255, 152, 0, 0.85);
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+a:visited {
+    color: rgba(255, 152, 0, 0.85);
+}
+
+h1 {
+    margin: 5px;
+}
+
+iframe {
+    border: none;
+    width: 100%;
+    height: 100%;
+}
+
+pre {
+    background-color: #111111DD;
+    border-top: 1px solid #ffffff80;
+    padding-top:10px;
+    margin: 0 0 10px 0;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+th, td {
+    background-color: #22222299;
+    border: 1px solid #ccc;
+    cursor: default;
+    letter-spacing: 2px;
+    padding: 8px 12px;
+    text-align: left;
+}
+
+tr:hover td, tr:hover {
+    background-color: rgba(27, 135, 153, 0.85);
+}
+
+#bgGL {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -10;
+}
+
+#closeIFrame {
+    align-items: center;
+    background-color: rgba(255, 152,   0, 0.85);
+    border: 2px solid white;
+    border-radius: 8px;
+    bottom: 20px;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    font-weight: bold;
+    height: 40px;
+    justify-content: space-evenly;
+    left: calc(50% - 80px);
+    opacity: 0.5;
+    position: fixed;
+    transform: translateY(100vh);
+    width: 140px;
+    z-index: 10;
+}
+#closeIFrame:hover {
+    opacity: 1.0;
+}
+#closeIFrame.active {
+    transition: 333ms;
+    transform: translateY(calc(100% - 50px));
+}
+
+.exeFound {
+    color: rgb(255, 152, 0) !important;
+    font-weight: bold;
+}
+
+.fa-book {
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.fa-xbox {
+    color: #30ff30;
+}
+
+#gameListTable td + td , .legendText{ 
+    text-shadow: 2px 2px 4px black;
+}
+
+#imageContainer {
+    background-color: #ffffff10;
+    background-repeat: no-repeat;
+    background-size: contain;
+    border: 3px solid #ffffff10;
+    height: -webkit-fill-available;
+    position: fixed;
+    right: 20px;
+    width: 256px;
+}
+
+.legendItem {
+    border: 1px solid white;
+    border-radius: 5px;
+}
+
+.legendText {
+    border: 1px solid #444444;
+    border-radius: 4px;
+    color: white;
+    display: inline-block;
+    margin: 2px;
+    padding: 4px 8px;
+    text-align: center;
+    width: 150px;
+}
+
+.letter {
+    background-color: rgba(255, 255, 255, 0.15);
+    border-radius: 4px;
+    color: white;
+    padding: 4px 8px;
+}
+
+.letterSelected {
+    background-color: rgba(66, 153, 27, 0.85);
+    border-radius: 4px;
+    color: white;
+    padding: 4px 8px;
+}
+
+#letterSelection, #statusLegend {
+    column-gap: 16px;
+    cursor: pointer;
+    display: flex;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#listAndImageContainer {
+    display: flex;
+}
+
+#listContainer {
+    display: flex;
+    justify-content: center;
+}
+
+#manualContainer {
+    position: absolute;
+    display: flex;
+    height: 100vh;
+    left: 0;
+    margin: 0;
+    padding: 0px;
+    top: 0;
+    transform: translateX(100vw);
+    width: 100vw;
+}
+#manualContainer.active {
+    transition: 333ms;
+    transform: translateX(0);
+}
+
+#mainTitle {
+    text-align: center;
+}
+
+#optionsMenu {
+    align-items: center;
+    background-color: #111111DD;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 20px;
+    position: sticky;
+    row-gap: 32px;
+    top: 0;
+    width: calc(100% - 40px);
+}
+
+#searchByText {
+    align-items: center;
+    display: flex;
+    font-size: 24px;
+}
+
+#searchByTextInput {
+    border: none;
+    background-color: #11111190;
+    color: white;
+    font-size: 24px;
+    margin-left: 32px;
+    outline: none;
+    width: 450px;
+}
+
+#statusLegend {
+    flex-direction: row-reverse;
+}
+
+#totalCount {
+    background-color: rgba(55, 216, 25, 0.5);
+    font-weight: bold;
+    font-size: 18px;
+    letter-spacing: 2px;
+}
+
+#totalCount td {
+    text-align: right;
+}
+
+#version {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

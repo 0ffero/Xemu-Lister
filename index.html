@@ -1,0 +1,104 @@
+<!--
+    XEMU Compatability List
+
+    Version 0.1   
+                    Create table for JSON data
+                    Add a PRE section with instructions on how to create the data
+                    Add Search by first letter (including numbers)
+                    Add "ALL" option to show all entries
+
+    Version 0.2 
+                    Create a ripper to download the images for each title (automatically update the images when needed - ie if any are missing)
+                    Optimise all images to reduce file size
+    
+    Version 0.3
+                    Add Search by text input
+                    Add search by status buttons
+                    Add counts of each status type button (percentage of total)
+    
+    Version 0.4
+                    Add GL background from xemu.app website
+    
+    Version 0.5
+                    Create direct link to Xemu emulator download
+                    Write a php script to find the current online version and display it on the page
+                    Add link to Vimm's Lair xbox section
+    
+    Version 0.6
+                    Add junction to xbox games folder
+                    Write a php script to list the games and output as JSON
+                    Copy the chached images for each game into the games folder
+                    This allow us to associate the game with the listed version
+                    Use this to update the DOM with available games
+                    Add "available games" filter button to A-Z
+
+    Version 0.7
+                    Update the scrolling of the image container
+    
+    Version 0.8
+                    Create junction to xemu main folder and create a php script to read the version from the exe
+                    Display the version next to the title
+    
+    Version 0.9
+                    Add manual icons for available games
+                    Create function to add these icons to the available games list
+                    Create iframe to display the manual when clicked
+                    Add close button for the iframe
+
+    Version 0.99
+                    Test for bugs and finalise version number
+                    BUG: When downloading images, anything with accents in the game title, were being downloaded multiple times.
+                    Added extra check when looking for the current Xemu(.exe) version to make sure the file exists.
+
+    Version 1.0     
+                    Everything works as expected : Release version
+//-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="icon" type="image/x-icon" href="./favicon.ico">
+    <link rel="stylesheet" href="./css/main.css">
+    <script src="./js/miscFunctions_v3.js"></script>
+    <script src="./font/d40a0f0b1f.js" crossorigin="anonymous"></script>
+    <script defer src="./js/vars.js"></script>
+    <script type=importmap>
+        {
+            "imports": {
+                "three": "./js/three/three.module.js",
+                "three/addons/": "./js/three/"
+            }
+        }
+    </script>
+    <script defer src="./js/backgroundModule.js" type="module"></script>
+</head>
+<body>
+    <div id="optionsMenu">
+        <div id="mainTitle"><h1>XEMU Compatability List</h1> <span id="onlineVersion"></span><span id="exeVersion"></span></div>
+        <div id="letterSelection"></div>
+        <div id="searchByText">Search: <input id="searchByTextInput" type="text" placeholder="Enter title here..." onkeyup="vars.searchByText(this.value)"></div>
+        <div id="statusLegend"></div>
+    </div>
+    <pre id="ripperInfo">
+    Run on the source of <a href="https://xemu.app/#compatibility">https://xemu.app/#compatibility</a> then copy the object (array) to xemu_compat_list
+
+    let output = [];
+    let results = [...document.querySelectorAll('.title-card')];
+    results.forEach((r)=> {
+        let imgSrc = r.getElementsByTagName('img');
+        imgSrc = imgSrc.length ? imgSrc[0].dataset.src : '';
+        output.push({ title: r.dataset.titleName, status: r.dataset.titleStatus, image: imgSrc });
+    });
+    console.log(output);
+    </pre>
+    <div id="listAndImageContainer">
+        <div id="listContainer"></div>
+        <div id="imageContainer"></div>
+    </div>
+    <div id="bgGL"></div>
+    <iframe id="manualContainer"></iframe>
+    <div id="closeIFrame" onpointerup="vars.showManualContainer(false)"><div><i class="fa-solid fa-circle-xmark"></i></div> <div>CLOSE</div></div>
+</body>
+</html>
