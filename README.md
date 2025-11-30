@@ -1,5 +1,27 @@
 ### XEMU Compatability List
 
+An interface for checking Xemu compatibility list.
+
+In built image downloader (cache to save hitting xemu.app every time).
+
+Uses directory junction to available games. They will be highlighted in the list as available.
+
+Shows games with manuals + manual viewer.
+
+Checks version of local xemu executable.
+
+Checks latest version on xemu.app.
+
+Direct download to newest version.
+
+Link to Vimms Lair (xbox section) for easy downlading of ISO for legally owned games.
+
+Animated GL background taken from xemu.app and rewritten for clarity.
+
+Has search by text, seartch by letter and search by game status.
+
+
+
     Version 0.1   
                     Create table for JSON data
                     Add a PRE section with instructions on how to create the data
