@@ -76,7 +76,7 @@
 </head>
 <body>
     <div id="optionsMenu">
-        <div id="mainTitle"><h1>XEMU Compatability List</h1> <span id="onlineVersion"></span><span id="exeVersion"></span></div>
+        <div id="mainTitle"><h1>XEMU Compatibility List</h1> <span id="onlineVersion"></span><span id="exeVersion"></span></div>
         <div id="letterSelection"></div>
         <div id="searchByText">Search: <input id="searchByTextInput" type="text" placeholder="Enter title here..." onkeyup="vars.searchByText(this.value)"></div>
         <div id="statusLegend"></div>
@@ -100,5 +100,6 @@
     <div id="bgGL"></div>
     <iframe id="manualContainer"></iframe>
     <div id="closeIFrame" onpointerup="vars.showManualContainer(false)"><div><i class="fa-solid fa-circle-xmark"></i></div> <div>CLOSE</div></div>
+    <div id="ipContainer" title="Is your VPN on?">Your Current IP: <span id="currentIP"></span></div>
 </body>
 </html>

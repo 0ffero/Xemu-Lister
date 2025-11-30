@@ -1,6 +1,6 @@
 var vars = {
-    version: "1.0",
-    title: "XEMU Compatability List",
+    version: "1.0.2",
+    title: "XEMU Compatibility List",
 
     fileToLoad: 'xemu_compat_list_20251126.json',
     availableGames: [],
@@ -19,6 +19,7 @@ var vars = {
         vars._addEventListeners();
         vars._loadList();
 
+        vars._getCurrentIP();
         vars._getLatestVersionFromLiveSite();
         vars._getExeVersion(); // get the version of xemu installed locally
         vars._downloadAnyMissingImages();
@@ -60,6 +61,21 @@ var vars = {
             vars.resizeTable();
         })
         .catch(error => console.error('Error fetching available games:', error));
+    },
+
+    _getCurrentIP: ()=> {
+        fetch('https://api.ipify.org?format=json')
+        .then(response => response.json())
+        .then(data => { 
+            vars.currentIP = data.ip;
+            // hide the last three octets for privacy
+            let ipParts = vars.currentIP.split('.');
+            ipParts[2] = 'xxx';
+            ipParts[3] = 'xxx';
+            vars.currentIP = ipParts.join('.');
+            document.getElementById('currentIP').innerText = vars.currentIP;
+        })
+        .catch(error => console.error('Error fetching current IP address:', error));
     },
 
     _getExeVersion: ()=> {

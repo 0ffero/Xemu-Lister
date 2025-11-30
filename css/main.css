@@ -78,7 +78,7 @@ tr:hover td, tr:hover {
     position: fixed;
     transform: translateY(100vh);
     width: 140px;
-    z-index: 10;
+    z-index: 11;
 }
 #closeIFrame:hover {
     opacity: 1.0;
@@ -115,6 +115,19 @@ tr:hover td, tr:hover {
     position: fixed;
     right: 20px;
     width: 256px;
+}
+
+#ipContainer {
+    position: absolute;
+    color: white;
+    top: 20px;
+    right: 20px;
+    background-color: #111111DD;
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-size: 14px;
+    width: 200px;
+    z-index: 5;
 }
 
 .legendItem {
@@ -174,6 +187,7 @@ tr:hover td, tr:hover {
     top: 0;
     transform: translateX(100vw);
     width: 100vw;
+    z-index: 10;
 }
 #manualContainer.active {
     transition: 333ms;
