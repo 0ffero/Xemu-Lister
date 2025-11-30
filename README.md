@@ -84,3 +84,7 @@ Has search by text, search by letter and search by game status.
 
     Version 1.0     
                     Everything works as expected : Release version
+
+    Version 1.0.3
+                    Fixed some typos.
+                    Added IP container. Lets the user know if they're on VPN or not.
