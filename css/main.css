@@ -118,7 +118,7 @@ tr:hover td, tr:hover {
 }
 
 #ipContainer {
-    position: absolute;
+    position: fixed;
     color: white;
     top: 20px;
     right: 20px;

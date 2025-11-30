@@ -1,5 +1,5 @@
 var vars = {
-    version: "1.0.2",
+    version: "1.0.3",
     title: "XEMU Compatibility List",
 
     fileToLoad: 'xemu_compat_list_20251126.json',
