@@ -7,7 +7,8 @@
                     Add "ALL" option to show all entries
 
     Version 0.2 
-                    Create a ripper to download the images for each title (automatically update the images when needed - ie if any are missing)
+                    Create a ripper to download the images for each title (automatically
+                        update the images when needed - ie if any are missing)
                     Optimise all images to reduce file size
     
     Version 0.3
@@ -20,7 +21,8 @@
     
     Version 0.5
                     Create direct link to Xemu emulator download
-                    Write a php script to find the current online version and display it on the page
+                    Write a php script to find the current online version and display it
+                        on the page
                     Add link to Vimm's Lair xbox section
     
     Version 0.6
@@ -35,7 +37,8 @@
                     Update the scrolling of the image container
     
     Version 0.8
-                    Create junction to xemu main folder and create a php script to read the version from the exe
+                    Create junction to xemu main folder and create a php script to read
+                        the version from the exe
                     Display the version next to the title
     
     Version 0.9
@@ -46,8 +49,10 @@
 
     Version 0.99
                     Test for bugs and finalise version number
-                    BUG: When downloading images, anything with accents in the game title, were being downloaded multiple times.
-                    Added extra check when looking for the current Xemu(.exe) version to make sure the file exists.
+                    BUG: When downloading images, anything with accents in the game
+                        title, were being downloaded multiple times.
+                    Added extra check when looking for the current Xemu(.exe) version
+                        to make sure the file exists.
 
     Version 1.0     
                     Everything works as expected : Release version
