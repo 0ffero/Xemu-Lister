@@ -4,11 +4,17 @@ An interface for checking Xemu compatibility list.
 
 In built image downloader (cache to save hitting xemu.app every time).
 
-Uses directory junction to available games. They will be highlighted in the list as available.
+Uses directory junction to availableGames. They will be highlighted in the list as available.
+    The directory junction isn't necessary. You can simply drop all your game folders into the "availableGames" folder.
+    NOTE:  To assign a game as "available", copy it's image from the cache folder to the game folder.
+           Don't worry if you accidentally move the image file, it will be re-downloaded next time Xemu Lister is refreshed.
 
 Shows games with manuals + manual viewer.
 
 Checks version of local xemu executable.
+    To check the exe version you need to change the
+    $path = 'D:/EMULATORS/xemu/xemu.exe';
+    to wherever youve downloaded xemu to
 
 Checks latest version on xemu.app.
 
@@ -18,7 +24,7 @@ Link to Vimms Lair (xbox section) for easy downlading of ISO for legally owned g
 
 Animated GL background taken from xemu.app and rewritten for clarity.
 
-Has search by text, seartch by letter and search by game status.
+Has search by text, search by letter and search by game status.
 
 
 
