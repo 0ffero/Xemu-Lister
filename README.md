@@ -1,4 +1,4 @@
-### XEMU (XBOX Emulator) Compatability List
+### XEMU (XBOX Emulator) Compatibility List
 
 An interface for checking Xemu compatibility list.
 
