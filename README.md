@@ -14,7 +14,7 @@ Shows games with manuals + manual viewer.
 Checks version of local xemu executable.  
     <ul>To check the exe version you need to change the  
     $path = 'D:/EMULATORS/xemu/xemu.exe';  
-    to wherever youve downloaded xemu to</ul>
+    in getXemuVersion.php to wherever you've downloaded xemu to</ul>
 
 Checks latest version on xemu.app.
 
