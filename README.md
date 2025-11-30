@@ -1,4 +1,4 @@
-###XEMU Compatability List
+### XEMU Compatability List
 
     Version 0.1   
                     Create table for JSON data
